@@ -41,3 +41,18 @@ $ . .venv/bin/activate
 ```zsh
 $ uv run jupyter lab
 ```
+
+## deploy
+
+書いたら、下記に目次として追加する。
+`rag_learning/_toc.yml`
+
+以下でデプロイする。
+
+```zsh
+$ jb build --all .
+$ git add .
+$ git commit -m "とりあえず"
+$ git push origin master
+$ ghp-import -n -p -f _build/html
+```
