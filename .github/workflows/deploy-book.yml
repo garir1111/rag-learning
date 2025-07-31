@@ -25,7 +25,7 @@ jobs:
         run: pip install uv
 
       - name: Install dependencies with uv
-        run: uv pip install --system --project .
+        run: uv pip install --system --project . --all
 
       - name: Cache executed notebooks
         uses: actions/cache@v4
