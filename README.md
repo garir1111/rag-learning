@@ -1,4 +1,4 @@
-# rag_learning
+# これはなに？
 
 ## 参考文献
 
@@ -28,6 +28,12 @@ from dotenv import load_dotenv
 load_dotenv()
 
 os.environ['OPENAI_API_KEY'] = os.getenv('OPENAI_API_KEY')
+```
+
+### 仮想環境の有効化
+
+```zsh
+$ . .venv/bin/activate
 ```
 
 ### オプション

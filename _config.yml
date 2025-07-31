@@ -1,0 +1,96 @@
+#######################################################################################
+# すべてのjupyter bookに読み込まれるデフォルト設定
+# ユーザーは自身の`_config.yml`ファイルでこれらの値を上書きすることが期待されています。
+# これはまた、許可されているすべてのキーと値の「マスターリスト」でもあります。
+
+#######################################################################################
+# ブック設定
+title: Learning RAG-AI-Agent # 本のタイトル。左側のナビゲーションバーに配置されます。
+author: Yorsh # 本の著者
+copyright: "2025" # フッターに配置される著作権年
+logo: "" # 本のロゴへのパス
+# ブックを構築する際にスキップするパターン。glob形式が使用可能です（例：「*skip.ipynb」）
+exclude_patterns: [_build, Thumbs.db, .DS_Store, "**.ipynb_checkpoints"]
+# 目次にないファイルを自動的に除外する
+only_build_toc_files: false
+
+#######################################################################################
+# 実行設定
+execute:
+  execute_notebooks: off # ビルド時にノートブックを実行するかどうか。（"auto"、"force"、"cache"、"off"）のいずれかでなければなりません
+  cache: "" # 実行アーティファクトを保存するために使用されるjupyterキャッシュへのパス。デフォルトは`_build/.jupyter_cache/`です
+  exclude_patterns: [] # 実行時にスキップするパターンのリスト（例：非常に時間がかかるノートブック）
+  timeout: 30 # 各ノートブックセルの実行が許可される最大時間（秒）。
+  run_in_temp:
+    false # `True`の場合、一時ディレクトリが作成され、コマンド作業ディレクトリ（cwd）として使用されます。
+    # そうでない場合は、ノートブックの親ディレクトリがcwdになります。
+  allow_errors: false # `False`の場合、コードセルがエラーを発生させると実行が停止します。そうでない場合は、すべてのセルが常に実行されます。
+  stderr_output: show # 'show'、'remove'、'remove-warn'、'warn'、'error'、'severe'のいずれか
+
+#######################################################################################
+# 解析とレンダリングの設定
+parse:
+  myst_enable_extensions: # mystパーサーでデフォルトで有効にする拡張機能。https://myst-parser.readthedocs.io/en/latest/using/syntax-optional.html を参照
+    # - amsmath
+    - colon_fence
+    # - deflist
+    - dollarmath
+    # - html_admonition
+    # - html_image
+    - linkify
+    # - replacements
+    # - smartquotes
+    - substitution
+    - tasklist
+  myst_url_schemes: [mailto, http, https] # Markdownリンクで外部URLとして認識されるURIスキーム
+  myst_dmath_double_inline: true # インラインコンテキスト内での表示数式（$$）を許可する
+
+#######################################################################################
+# HTML固有の設定
+html:
+  favicon: "" # ファビコン画像へのパス
+  use_edit_page_button: false # ページに「このページを編集」ボタンを追加するかどうか。`true`の場合、repository:にリポジトリ情報を入力する必要があります
+  use_repository_button: false # リポジトリへのリンクボタンを追加するかどうか
+  use_issues_button: false # 「問題を開く」ボタンを追加するかどうか
+  use_multitoc_numbering: true # パート/チャプター間で連続した番号付け
+  extra_footer: "" # フッターの下に表示されます。
+  home_page_in_navbar: true # ホームページを左側のナビゲーションバーに含めるかどうか
+  baseurl: "" # あなたの本がホストされる基本URL。画像プレビューとソーシャルリンクの作成に使用されます。例：https://mypage.com/mybook/
+  analytics:
+    plausible_analytics_domain: ""
+    plausible_analytics_url: "https://plausible.io/js/script.js"
+    google_analytics_id: "" # 本の閲覧を追跡するために使用できるGAのID。
+
+  comments:
+    hypothesis: false
+    utterances: false
+  announcement: "" # サイトの上部にあるバナーアナウンス。
+
+#######################################################################################
+# LaTeX固有の設定
+latex:
+  latex_engine: pdflatex # 'pdflatex'、'xelatex'（ユニコードに推奨）、'luatex'、'platex'、'uplatex'のいずれか
+  use_jupyterbook_latex: true # デフォルトでPDFビルドにsphinx-jupyterbook-latexを使用する
+
+#######################################################################################
+# 起動ボタンの設定
+launch_buttons:
+  notebook_interface: classic # インタラクティブリンクがアクティブにするインターフェース ["classic", "jupyterlab"]
+  binderhub_url: "" # BinderHubのURL（例：https://mybinder.org）
+  jupyterhub_url: "" # JupyterHubのURL（例：https://datahub.berkeley.edu）
+  thebe: false # ページにthebeボタンを追加する（リポジトリがBinderで実行される必要があります）
+  colab_url: "" # Google ColabのURL（https://colab.research.google.com）
+  deepnote_url: "" # DeepnoteのURL（https://deepnote.com）
+
+repository:
+  url: https://github.com/garir1111/rag-learning # あなたの本のリポジトリへのURL
+  path_to_book: "" # リポジトリのルートからあなたの本のフォルダへのパス。
+  branch: main # リンクを作成する際に使用するリポジトリのブランチ
+
+#######################################################################################
+# 高度およびパワーユーザー設定
+sphinx:
+  extra_extensions: # Sphinxによって読み込まれる追加の拡張機能のリスト（JBですでに使用されているものに追加）。
+  local_extensions: # "name: path"アイテムで指定されたsphinxによって読み込まれるローカル拡張機能のリスト
+  recursive_update: false # Sphinx設定を上書きする（true）か、再帰的に更新する（false）かを示すブール値
+  config: # Sphinx設定を直接上書きするためのキーと値のペア

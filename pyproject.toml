@@ -19,4 +19,5 @@ dependencies = [
     "scikit-learn>=1.7.1",
     "seaborn>=0.13.2",
     "httpx==0.27.2",
+    "jupyter-book>=1.0.4.post1",
 ]
