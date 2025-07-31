@@ -11,6 +11,3 @@ wheels/
 
 # env
 .env
-
-# build
-_build/
