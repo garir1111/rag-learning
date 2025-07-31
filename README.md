@@ -1,5 +1,7 @@
 # これはなに？
 
+[GitHub - garir1111/rag-learning](https://github.com/garir1111/rag-learning)
+
 ## 参考文献
 
 1. [LangChain と LangGraph による RAG・AI エージェント［実践］入門](https://amzn.asia/d/abnDoNd)
@@ -47,12 +49,4 @@ $ uv run jupyter lab
 書いたら、下記に目次として追加する。
 `rag_learning/_toc.yml`
 
-以下でデプロイする。
-
-```zsh
-$ jb build --all .
-$ git add .
-$ git commit -m "とりあえず"
-$ git push origin master
-$ ghp-import -n -p -f _build/html
-```
+あとは push だけで自動ビルドされる。
