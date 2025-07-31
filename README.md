@@ -1,4 +1,4 @@
-# これはなに？
+# readme
 
 [GitHub - garir1111/rag-learning](https://github.com/garir1111/rag-learning)
 
