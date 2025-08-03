@@ -6,3 +6,4 @@ root: README
 chapters:
   - file: src/section1_LLM-App-development
   - file: src/section2_ChatGPT-API-basic
+  - file: src/section3_promptEngineering
